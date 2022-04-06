@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/models/product.dart';
-import 'package:foxgold1/screens/components/categories.dart';
+import 'package:foxgold1/screens/home_screen/components/categories.dart';
 import 'package:foxgold1/screens/details/details_screen.dart';
 import 'item_card.dart';
 

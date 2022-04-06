@@ -30,7 +30,7 @@ class CartProductCard extends StatelessWidget {
         Expanded(child: Text(product.title)),
         IconButton(onPressed: (){controller.addProduct(product);}, icon: const Icon(Icons.add_circle_outline)),
         Text("${quantity}"),
-        IconButton(onPressed: (){controller.removeProduct(product);}, icon: const Icon(Icons.remove_circle_outline),),
+        IconButton(onPressed: (){controller.removeProduct(product, context);}, icon: const Icon(Icons.remove_circle_outline),),
 
       ]),
     );

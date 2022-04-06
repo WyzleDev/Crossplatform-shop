@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/models/product.dart';
 import 'package:foxgold1/screens/cart/cart_screen.dart';
+import 'package:foxgold1/screens/cart/components/cart_controller.dart';
 import 'package:foxgold1/screens/details/components/body.dart';
-
+import 'package:get/get.dart';
 class DetailScreen extends StatelessWidget {
   final Product product;
+  final CartController cartController = Get.find();
 
-  const DetailScreen({Key? key, required this.product}) : super(key: key);
+  DetailScreen({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +33,14 @@ class DetailScreen extends StatelessWidget {
       actions: [
         IconButton(onPressed: () {}, icon: const Icon(Icons.search_outlined)),
         IconButton(
-            onPressed: () => Navigator.push(
-                context, MaterialPageRoute(builder: (context) => CartScreen())),
+            onPressed: () {
+              if (cartController.products.length > 0){
+                Get.to(() => CartScreen());
+              }
+              else{
+                return;
+              }
+            },
             icon: const Icon(Icons.shopping_cart_outlined)),
         const SizedBox(
           width: kDefaultPadding / 2,

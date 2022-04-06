@@ -12,9 +12,10 @@ class _CategoriesState extends State<Categories> {
   List<String> categories = [
     "все",
     "Торты",
-    "Трюфели",
-    "Подарочные наборы",
-    "Шоколад"
+    "Печенье",
+    "Блины",
+    "Шоколад",
+    "Макароны"
   ];
   int selectedIndex = 0;
 

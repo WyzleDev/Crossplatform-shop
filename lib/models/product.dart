@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Product {
-  final String image, title, description;
+  final String image, title, description, category;
   final int price, size, id;
   final Color color;
 
@@ -13,6 +13,7 @@ class Product {
     required this.description,
     required this.size,
     required this.color,
+    required this.category,
   });
 }
 
@@ -25,7 +26,8 @@ List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/Coockie.png",
-    color: const Color(0xFFCEA77D),
+    color: const Color(0xFF78D45F),
+    category: "Печенье",
   ),
   Product(
     id: 2,
@@ -35,7 +37,8 @@ List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/Macarony.png",
-    color: const Color(0xFFAEAEAE),
+    color: const Color(0xFFFFC241),
+    category: "Макароны",
   ),
   Product(
     id: 3,
@@ -45,7 +48,8 @@ List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/muffin.png",
-    color: const Color(0xFFFB7883),
+    color: const Color(0xFFCB9976),
+    category: "Шоколад",
   ),
   Product(
     id: 4,
@@ -55,7 +59,8 @@ List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/Tort.png",
-    color: const Color(0xFFE6b398),
+    color: const Color(0xff5bec86),
+    category: "Торты",
   ),
   Product(
     id: 5,
@@ -66,6 +71,7 @@ List<Product> products = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/tarelkaSblinami.png",
     color: const Color(0xFF3D82AE),
+    category: "Блины",
   ),
   Product(
     id: 6,
@@ -75,42 +81,51 @@ List<Product> products = [
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/icecream.png",
-    color: const Color(0xFF3D82AE),
+    color: const Color(0xFFCB9976),
+    category: "Шоколад",
   ),
   Product(
-      id: 7,
-      image: "assets/image/macaron2.png",
-      title: "товар 7",
-      price: 100,
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
-      size: 10,
-      color: const Color(0xff78d45f)),
+    id: 7,
+    image: "assets/image/macaron2.png",
+    title: "Макароны",
+    price: 100,
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
+    size: 10,
+    color: const Color(0xffffc241),
+    category: "Макароны",
+  ),
   Product(
-      id: 8,
-      image: "assets/image/tarelka2.png",
-      title: "товар 8",
-      price: 100,
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
-      size: 10,
-      color: const Color(0xff78d45f)),
+    id: 8,
+    image: "assets/image/tarelka2.png",
+    title: "Печенье",
+    price: 100,
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
+    size: 10,
+    color: const Color(0xff78d45f),
+    category: "Печенье",
+  ),
   Product(
-      id: 9,
-      image: "assets/image/tarelkaSblinami.png",
-      title: "товар 9",
-      price: 100,
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
-      size: 10,
-      color: const Color(0xff78d45f)),
+    id: 9,
+    image: "assets/image/tarelkaSblinami.png",
+    title: "Блины-Блины",
+    price: 100,
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
+    size: 10,
+    color: const Color(0xff3d82ae),
+    category: "Блины",
+  ),
   Product(
-      id: 10,
-      image: "assets/image/tarelka2.png",
-      title: "товар 10",
-      price: 100,
-      description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
-      size: 10,
-      color: const Color(0xff78d45f)),
+    id: 10,
+    image: "assets/image/tarelka2.png",
+    title: "Печенье",
+    price: 100,
+    description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
+    size: 10,
+    color: const Color(0xff78d45f),
+    category: "Печенье",
+  ),
 ];
