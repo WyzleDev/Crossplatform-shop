@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/models/product.dart';
 import 'package:foxgold1/screens/components/categories.dart';
+import 'package:foxgold1/screens/details/details_screen.dart';
+import 'item_card.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -22,15 +24,30 @@ class Body extends StatelessWidget {
           ),
         ),
         const Categories(),
-        Container(
-          padding: const EdgeInsets.all(kDefaultPadding),
-          height: 180,
-          width: 160,
-          decoration: BoxDecoration(
-            color: products[0].color,
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
+        Expanded(
+            child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          child: GridView.builder(
+              itemCount: products.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: kDefaultPadding,
+                crossAxisSpacing: kDefaultPadding,
+                childAspectRatio: 0.75,
+              ),
+              itemBuilder: (context, index) => ItemCard(
+                    product: products[index],
+                    press: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailScreen(
+                                  product: products[index],
+                                ))),
+                  )),
+        )),
+        const SizedBox(
+          height: kDefaultPadding / 2,
+        )
       ],
     );
   }
