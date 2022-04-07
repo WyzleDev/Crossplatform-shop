@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/models/product.dart';
+import 'package:foxgold1/screens/cart/cart_screen.dart';
 import 'package:foxgold1/screens/cart/components/cart_controller.dart';
 import 'package:get/get.dart';
 
@@ -50,7 +51,10 @@ class AddToCart extends StatelessWidget {
                         fontSize: 17,
                         fontWeight: FontWeight.bold),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    cartController.addProduct(product);
+                    Get.to(CartScreen());
+                  },
                 )),
           )
         ],

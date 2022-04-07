@@ -25,7 +25,7 @@ class CartProductCard extends StatelessWidget {
           horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         CircleAvatar(
-            radius: 40, backgroundImage: Image.asset(product.image).image),
+            radius: 40, backgroundImage: Image.asset(product.image).image, backgroundColor: product.color,),
         SizedBox(width: kDefaultPadding,),
         Expanded(child: Text(product.title)),
         IconButton(onPressed: (){controller.addProduct(product);}, icon: const Icon(Icons.add_circle_outline)),

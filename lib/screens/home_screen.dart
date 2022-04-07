@@ -23,40 +23,7 @@ class HomeScreen extends StatelessWidget {
             color: kTextColor,
           ),
           onPressed: () {
-            Get.defaultDialog(
-              title: "О нас",
-              middleText:
-                  "FOXGOLD - это магазин кондитерских изделий и не только",
-              barrierDismissible: true,
-              content: Column(
-                children: [
-                  const Text("wkbeuhabirguhaebirg"),
-                  const SizedBox(
-                    height: kDefaultPadding / 3,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                          onPressed: () {
-                            launchURLTelegram();
-                          },
-                          icon: const Icon(Icons.telegram_outlined)),
-                      IconButton(
-                          onPressed: () {
-                            launchURLWhatsApp();
-                          },
-                          icon: const Icon(Icons.whatsapp_outlined)),
-                    ],
-                  ),
-                  TextButton(
-                      onPressed: () {
-                        launchURLTechSupport();
-                      },
-                      child: Text("Тех. поддержка"))
-                ],
-              ),
-            );
+            buildAboutInfo();
           },
         ),
         actions: [
@@ -95,6 +62,48 @@ class HomeScreen extends StatelessWidget {
         child: const Icon(Icons.question_answer_outlined),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+    );
+  }
+
+  Future<dynamic> buildAboutInfo() {
+    return Get.defaultDialog(
+      title: "О нас",
+      middleText: "FOXGOLD - это магазин кондитерских изделий и не только",
+      barrierDismissible: true,
+      titlePadding: EdgeInsets.only(top: kDefaultPadding*2),
+      content: Container(
+        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding/2),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lacus ut purus rutrum elementum.Praesent efficitur finibus lacus. Sed.",),
+            const SizedBox(
+              height: kDefaultPadding / 3,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                    onPressed: () {
+                      launchURLTelegram();
+                    },
+                    icon: const Icon(Icons.telegram_outlined)),
+                IconButton(
+                    onPressed: () {
+                      launchURLWhatsApp();
+                    },
+                    icon: const Icon(Icons.whatsapp_outlined)),
+              ],
+            ),
+            TextButton(
+                onPressed: () {
+                  launchURLTechSupport();
+                },
+                child: Text("Тех. поддержка"))
+          ],
+        ),
+      ),
     );
   }
 }

@@ -21,7 +21,9 @@ class CartController extends GetxController {
   removeProduct(Product product, context) {
     if (_products.containsKey(product) && _products[product] == 1) {
       _products.removeWhere((key, value) => key == product);
-      Navigator.pop(context);
+      if(_products.isEmpty){
+        Navigator.pop(context);
+      }
     } else {
       _products[product] -= 1;
     }
