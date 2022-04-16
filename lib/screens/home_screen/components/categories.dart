@@ -10,7 +10,7 @@ class Categories extends StatefulWidget {
 
 class _CategoriesState extends State<Categories> {
   List<String> categories = [
-    "все",
+    "Все",
     "Торты",
     "Печенье",
     "Блины",

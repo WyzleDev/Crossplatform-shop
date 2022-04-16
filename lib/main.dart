@@ -1,6 +1,8 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/screens/home_screen.dart';
+import 'package:foxgold1/screens/splash_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: AnimatedSplashScreen(nextScreen: HomeScreen(), splash: Image.asset('assets/image/logofoxgold.png'), duration: 2500),
     );
   }
 }

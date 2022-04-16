@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
+import 'package:foxgold1/screens/about_screen/about_screen.dart';
 import 'package:foxgold1/screens/cart/cart_screen.dart';
 import 'package:foxgold1/screens/cart/components/cart_controller.dart';
 import 'package:foxgold1/screens/home_screen/components/body.dart';
@@ -23,19 +24,10 @@ class HomeScreen extends StatelessWidget {
             color: kTextColor,
           ),
           onPressed: () {
-            buildAboutInfo();
+            Get.to(()=>AboutScreen());
           },
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: kDefaultPadding / 2),
-            child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search_sharp,
-                  color: kTextColor,
-                )),
-          ),
           Padding(
             padding: const EdgeInsets.only(left: kDefaultPadding / 2),
             child: IconButton(
@@ -56,12 +48,7 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-      body: const Body(),
-      floatingActionButton: FloatingActionButton.small(
-        onPressed: () {},
-        child: const Icon(Icons.question_answer_outlined),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
+      body: Body(),
     );
   }
 

@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.3.8
   url_launcher: ^6.0.20
+  full_screen_image: any
+  animated_splash_screen: any
 
 dev_dependencies:
   flutter_test:
@@ -68,8 +70,17 @@ flutter:
     - assets/image/icecream.png
     - assets/image/muffin.png
     - assets/image/Tort.png
+    - assets/image/logofoxgold.png
     - assets/image/tarelka2.png
     - assets/image/macaron2.png
+    - assets/image/C9WeG33vjJc.jpg
+    - assets/image/certificate1.png
+    - assets/image/certificate2.png
+    - assets/image/certificate3.png
+    - assets/image/certificate4.png
+    - assets/image/certificate5.jpg
+    - assets/image/certificate6.png
+    - assets/image/certificate7.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -31,7 +31,6 @@ class DetailScreen extends StatelessWidget {
         onPressed: () => Navigator.pop(context),
       ),
       actions: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.search_outlined)),
         IconButton(
             onPressed: () {
               if (cartController.products.length > 0){

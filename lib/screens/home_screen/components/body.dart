@@ -3,10 +3,11 @@ import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/models/product.dart';
 import 'package:foxgold1/screens/home_screen/components/categories.dart';
 import 'package:foxgold1/screens/details/details_screen.dart';
+import 'package:get/get.dart';
 import 'item_card.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class Body extends StatelessWidget {
                 ?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
-        const Categories(),
+        const SizedBox(height: kDefaultPadding,),
         Expanded(
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
