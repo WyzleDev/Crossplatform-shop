@@ -28,6 +28,10 @@ class CartController extends GetxController {
       _products[product] -= 1;
     }
   }
+  deleteAll(context){
+    _products = {}.obs;
+    Navigator.pop(context);
+  }
 
   get products => _products;
 

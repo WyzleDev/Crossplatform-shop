@@ -3,10 +3,11 @@ import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/screens/home_screen/components/open_social_networks.dart';
 import 'package:foxgold1/screens/about_screen/components/certificates.dart';
 import 'package:full_screen_image/full_screen_image.dart';
-import 'package:foxgold1/screens/home_screen/components/open_social_networks.dart';
+import 'package:foxgold1/users.dart';
 
 class BodyAbout extends StatelessWidget {
-  const BodyAbout({Key? key}) : super(key: key);
+  final alexa = alexaModel;
+  BodyAbout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +49,9 @@ class BodyAbout extends StatelessWidget {
                       const SizedBox(
                         height: kDefaultPadding / 2,
                       ),
-                      const Text(
-                        "Меня зовут Александра, мне 18 лет. Я старший кондитер компании FOXGOLD. Очень люблю творчесвто и свое дело. Выполню работу любой сложности от праздничного торта до маленького набора для ваших самых любимых людей.",
-                        style: TextStyle(fontSize: 15, height: 1.30),
+                      Text(
+                        alexa.description,
+                        style: const TextStyle(fontSize: 15, height: 1.30),
                       ),
                       const SizedBox(
                         height: kDefaultPadding,
@@ -65,7 +66,7 @@ class BodyAbout extends StatelessWidget {
                         child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(14),
-                                color: Colors.pinkAccent,
+                                color: alexa.color,
                                 border: Border.all(
                                     width: 5, color: const Color(0xa8424141))),
                             height: 250,
@@ -100,7 +101,8 @@ class BodyAbout extends StatelessWidget {
 }
 
 class ImageWithHeader extends StatelessWidget {
-  const ImageWithHeader({
+  final alexa = alexaModel;
+  ImageWithHeader({
     Key? key,
   }) : super(key: key);
 
@@ -116,7 +118,7 @@ class ImageWithHeader extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            "Алекасндра Ларионова",
+            alexa.name +" "+ alexa.surname,
             style: Theme.of(context)
                 .textTheme
                 .headline5
@@ -142,11 +144,11 @@ class ImageWithHeader extends StatelessWidget {
               ),
               Expanded(
                   child: Hero(
-                      tag: "123",
+                      tag: "alexa",
                       child: CircleAvatar(
                         radius: 130,
                         backgroundImage: Image.asset(
-                          "assets/image/C9WeG33vjJc.jpg",
+                          alexa.image,
                           fit: BoxFit.fill,
                         ).image,
                       )))

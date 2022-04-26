@@ -5,6 +5,7 @@ import 'package:foxgold1/screens/cart/cart_screen.dart';
 import 'package:foxgold1/screens/cart/components/cart_controller.dart';
 import 'package:foxgold1/screens/details/components/body.dart';
 import 'package:get/get.dart';
+
 class DetailScreen extends StatelessWidget {
   final Product product;
   final CartController cartController = Get.find();
@@ -33,11 +34,10 @@ class DetailScreen extends StatelessWidget {
       actions: [
         IconButton(
             onPressed: () {
-              if (cartController.products.length > 0){
+              if (cartController.products.length > 0) {
                 Get.to(() => CartScreen());
-              }
-              else{
-                return;
+              } else {
+                Get.snackbar("Упс", "Похоже в корзине еще пусто");
               }
             },
             icon: const Icon(Icons.shopping_cart_outlined)),

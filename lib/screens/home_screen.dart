@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   if (cartController.products.length > 0) {
                     Get.to(() => CartScreen());
                   } else {
-                    return;
+                    Get.snackbar("Упс", "Похоже в корзине еще пусто");
                   }
                 },
                 icon: const Icon(

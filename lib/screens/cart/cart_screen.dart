@@ -7,7 +7,7 @@ import 'package:foxgold1/screens/cart/components/cart_total.dart';
 import 'package:get/get.dart';
 
 class CartScreen extends StatelessWidget {
-  CartScreen({Key? key}) : super(key: key);
+  const CartScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,6 @@ class CartScreen extends StatelessWidget {
         children: [
           CartProducts(),
           CartTotal(),
-          const SizedBox(
-            height: kDefaultPadding,
-          ),
         ],
       ),
     );
@@ -29,6 +26,7 @@ class CartScreen extends StatelessWidget {
 }
 
 AppBar buildAppBar(BuildContext context) {
+  final cartController = Get.put(CartController());
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
@@ -39,5 +37,16 @@ AppBar buildAppBar(BuildContext context) {
       ),
       onPressed: () => Navigator.pop(context),
     ),
+    title: const Center(
+      child: Text("Корзина", style: TextStyle(color: kTextColor)),
+    ),
+    actions: [
+      IconButton(
+          onPressed: () => cartController.deleteAll(context),
+          icon: const Icon(
+            Icons.delete_forever_outlined,
+            color: Colors.black,
+          ))
+    ],
   );
 }
