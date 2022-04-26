@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../constant.dart';
 import '../../../models/product.dart';
 
@@ -50,7 +49,7 @@ class ColorAndSize extends StatelessWidget {
                 children: const [
                   ColorDot(
                     color: Color(0xFFE3D4B7),
-                    isSelected: true,
+                    isSelected: false,
                   ),
                   ColorDot(
                     color: Color(0xFFC64B4B),
@@ -67,16 +66,13 @@ class ColorAndSize extends StatelessWidget {
         ),
         Expanded(
           child: RichText(
-            text: TextSpan(
-                style: const TextStyle(color: kTextColor),
-                children: [
-                  const TextSpan(text: "Размер\n"),
-                  TextSpan(
-                      text: "${product.size} см",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline5),
-                ]),
+            text:
+                TextSpan(style: const TextStyle(color: kTextColor), children: [
+              const TextSpan(text: "В наличии\n"),
+              TextSpan(
+                  text: "${product.size} шт",
+                  style: Theme.of(context).textTheme.headline5),
+            ]),
           ),
         )
       ],

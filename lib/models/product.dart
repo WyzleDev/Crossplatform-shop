@@ -22,7 +22,7 @@ List<Product> products = [
     id: 1,
     title: 'Малиновое печенье',
     price: 900,
-    size: 5,
+    size: 10,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/Coockie.png",
@@ -44,7 +44,7 @@ List<Product> products = [
     id: 3,
     title: 'Маффин',
     price: 400,
-    size: 5,
+    size: 6,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/muffin.png",
@@ -55,7 +55,7 @@ List<Product> products = [
     id: 4,
     title: 'Торт клубника',
     price: 443,
-    size: 5,
+    size: 20,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/Tort.png",
@@ -66,7 +66,7 @@ List<Product> products = [
     id: 5,
     title: 'Блины "Утро в деревне"',
     price: 200,
-    size: 5,
+    size: 10,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/tarelkaSblinami.png",
@@ -77,7 +77,7 @@ List<Product> products = [
     id: 6,
     title: 'Мороженное',
     price: 400,
-    size: 5,
+    size: 10,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
     image: "assets/image/icecream.png",
@@ -91,7 +91,7 @@ List<Product> products = [
     price: 100,
     description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt, neque sed posuere hendrerit, enim massa condimentum lacus, in convallis. ",
-    size: 10,
+    size: 6,
     color: const Color(0xffffc241),
     category: "Макароны",
   ),

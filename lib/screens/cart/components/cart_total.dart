@@ -53,7 +53,7 @@ class CartTotal extends StatelessWidget {
                           snackStyle: SnackStyle.FLOATING,
                           showProgressIndicator: true,
                           snackPosition: SnackPosition.BOTTOM,
-                          duration: Duration(seconds: 4));
+                          duration: const Duration(seconds: 4));
                     },
                   )),
             ),

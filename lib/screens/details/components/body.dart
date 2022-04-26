@@ -36,9 +36,9 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       ColorAndSize(product: product),
-                      SizedBox(height: kDefaultPadding/2,),
+                      const SizedBox(height: kDefaultPadding/2,),
                       Description(product: product),
-                      SizedBox(height: kDefaultPadding,),
+                      const SizedBox(height: kDefaultPadding,),
                       AddToCart(product: product)
                     ],
                   ),

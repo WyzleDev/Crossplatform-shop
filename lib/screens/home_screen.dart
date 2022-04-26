@@ -5,7 +5,6 @@ import 'package:foxgold1/screens/cart/cart_screen.dart';
 import 'package:foxgold1/screens/cart/components/cart_controller.dart';
 import 'package:foxgold1/screens/home_screen/components/body.dart';
 import 'package:get/get.dart';
-import 'package:foxgold1/screens/home_screen/components/open_social_networks.dart';
 
 class HomeScreen extends StatelessWidget {
   final cartController = Get.put(CartController());
@@ -24,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             color: kTextColor,
           ),
           onPressed: () {
-            Get.to(()=>AboutScreen());
+            Get.to(() => AboutScreen());
           },
         ),
         actions: [
@@ -33,9 +32,9 @@ class HomeScreen extends StatelessWidget {
             child: IconButton(
                 onPressed: () {
                   if (cartController.products.length > 0) {
-                    Get.to(() => CartScreen());
+                    Get.to(() => const CartScreen());
                   } else {
-                    return;
+                    Get.snackbar("Упс", "Похоже в корзине еще пусто");
                   }
                 },
                 icon: const Icon(
@@ -49,48 +48,6 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
-    );
-  }
-
-  Future<dynamic> buildAboutInfo() {
-    return Get.defaultDialog(
-      title: "О нас",
-      middleText: "FOXGOLD - это магазин кондитерских изделий и не только",
-      barrierDismissible: true,
-      titlePadding: EdgeInsets.only(top: kDefaultPadding*2),
-      content: Container(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding/2),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut lacus ut purus rutrum elementum.Praesent efficitur finibus lacus. Sed.",),
-            const SizedBox(
-              height: kDefaultPadding / 3,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                    onPressed: () {
-                      launchURLTelegram();
-                    },
-                    icon: const Icon(Icons.telegram_outlined)),
-                IconButton(
-                    onPressed: () {
-                      launchURLWhatsApp();
-                    },
-                    icon: const Icon(Icons.whatsapp_outlined)),
-              ],
-            ),
-            TextButton(
-                onPressed: () {
-                  launchURLTechSupport();
-                },
-                child: Text("Тех. поддержка"))
-          ],
-        ),
-      ),
     );
   }
 }

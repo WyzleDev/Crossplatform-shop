@@ -22,7 +22,7 @@ class AddToCart extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(right: kDefaultPadding),
+            margin: const EdgeInsets.only(right: kDefaultPadding),
             height: 50,
             width: 58,
             decoration: BoxDecoration(
@@ -53,7 +53,7 @@ class AddToCart extends StatelessWidget {
                   ),
                   onPressed: () {
                     cartController.addProduct(product);
-                    Get.to(CartScreen());
+                    Get.to(const CartScreen());
                   },
                 )),
           )

@@ -1,5 +1,3 @@
-
-
 import 'package:foxgold1/models/product.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +25,10 @@ class CartController extends GetxController {
     } else {
       _products[product] -= 1;
     }
+  }
+  deleteAll(context){
+    _products = {}.obs;
+    Navigator.pop(context);
   }
 
   get products => _products;

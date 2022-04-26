@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/screens/about_screen/components/body.dart';
+import 'package:foxgold1/screens/cart/cart_screen.dart';
+import 'package:get/get.dart';
+import '../cart/components/cart_controller.dart';
 
 class AboutScreen extends StatelessWidget {
-  const AboutScreen({Key? key}) : super(key: key);
+  final cartController = Get.put(CartController());
+
+  AboutScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +23,14 @@ class AboutScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(
+              onPressed: () {
+                if (cartController.products.length > 0) {
+                  Get.to(const CartScreen());
+                }else{
+                  Get.snackbar("Упс", "Похоже в корзине еще пусто");
+                }
+              },
+              icon: const Icon(
                 Icons.shopping_cart_outlined,
                 color: Colors.black,
               ))
@@ -30,6 +40,5 @@ class AboutScreen extends StatelessWidget {
       backgroundColor: Colors.pinkAccent,
       body: BodyAbout(),
     );
-
   }
 }
