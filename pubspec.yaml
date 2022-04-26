@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.3.8
   url_launcher: ^6.0.20
-  full_screen_image: any
+  full_screen_image: ^1.0.1
   animated_splash_screen: any
 
 dev_dependencies:

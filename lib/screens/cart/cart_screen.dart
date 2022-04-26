@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:foxgold1/constant.dart';
 import 'package:foxgold1/screens/cart/components/CartProducts.dart';
 import 'package:foxgold1/screens/cart/components/cart_controller.dart';
-import 'package:foxgold1/screens/cart/components/cart_product_card.dart';
 import 'package:foxgold1/screens/cart/components/cart_total.dart';
 import 'package:get/get.dart';
 

@@ -35,7 +35,7 @@ class DetailScreen extends StatelessWidget {
         IconButton(
             onPressed: () {
               if (cartController.products.length > 0) {
-                Get.to(() => CartScreen());
+                Get.to(() => const CartScreen());
               } else {
                 Get.snackbar("Упс", "Похоже в корзине еще пусто");
               }

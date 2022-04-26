@@ -1,5 +1,3 @@
-
-
 import 'package:foxgold1/models/product.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
