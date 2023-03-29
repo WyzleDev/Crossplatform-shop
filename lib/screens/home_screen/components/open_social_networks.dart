@@ -1,7 +1,7 @@
 import 'package:url_launcher/url_launcher.dart';
 
 launchURLTelegram() async {
-  const url = 'https://t.me/foxgold_official';
+  const url = 'https://t.me/your_little_demon_13';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -23,6 +23,6 @@ launchURLTechSupport() async {
   if (await canLaunch(url)) {
     await launch(url);
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launch $url';  
   }
 }

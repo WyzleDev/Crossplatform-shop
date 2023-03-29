@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
   final cartController = Get.put(CartController());
 
   HomeScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -37,7 +37,7 @@ class BodyAbout extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           IconButton(icon: const Icon(Icons.telegram_outlined), onPressed: ()=> launchURLTelegram(),),
-                          IconButton(icon:const Icon(Icons.whatsapp_outlined), onPressed: ()=> launchURLWhatsApp(),)
+                          IconButton(icon:const Icon(Icons.social_distance), onPressed: ()=> launchURLWhatsApp(),)
                         ],
                       ),
 
